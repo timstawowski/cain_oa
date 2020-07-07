@@ -32,7 +32,6 @@ defmodule CainOpenApi.MixProject do
 
   defp package do
     [
-      name: "CainOpenApi",
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/timstawowski/cain_oa"}
     ]
