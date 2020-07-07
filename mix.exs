@@ -21,7 +21,8 @@ defmodule CainOpenApi.MixProject do
 
   defp deps do
     [
-      {:jason, ">= 1.0.0"}
+      {:jason, ">= 1.0.0"},
+      {:ex_doc, "~> 0.14", only: :dev, runtime: false}
     ]
   end
 
