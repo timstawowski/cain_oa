@@ -160,9 +160,3 @@ defmodule CainOpenApi do
     end)
   end
 end
-
-defmodule Endpoint do
-  use CainOpenApi,
-    otp_app: :cain_oa,
-    path: "priv/openapi.json"
-end
