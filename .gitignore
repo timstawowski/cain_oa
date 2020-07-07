@@ -23,3 +23,5 @@ erl_crash.dump
 cain_oa-*.tar
 
 .iex.exs
+
+.tool-versions
