@@ -2,10 +2,8 @@ defmodule CainOpenApi do
   @moduledoc false
   defmodule FileNotFound, do: defexception([:message])
 
-  defmacro __using__(opts) do
-    otp_app = Keyword.get(opts, :otp_app)
-    path = Keyword.get(opts, :path)
-    file_path = Application.app_dir(otp_app, path)
+  defmacro __using__(_opts) do
+    file_path = Application.app_dir(:cain_oa, "priv/openapi.json")
 
     with {:ok, content} <- File.read(file_path),
          {:ok, decoded_content} <- Jason.decode(content),
@@ -161,4 +159,10 @@ defmodule CainOpenApi do
       Macro.var(p, mod)
     end)
   end
+end
+
+defmodule Endpoint do
+  use CainOpenApi,
+    otp_app: :cain_oa,
+    path: "priv/openapi.json"
 end

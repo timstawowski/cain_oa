@@ -1,6 +1,5 @@
 defmodule Endpoint do
-  use CainOpenApi,
-      "priv/openapi.json"
+  use CainOpenApi
 end
 
 ExUnit.start()
