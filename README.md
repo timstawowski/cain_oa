@@ -22,10 +22,8 @@ Download the current open api spec following the instructions on the official Ca
 Define a module which is using CainOpenApi.
 
 ```elixir
-defmodule Endpoint do
-  use CainOpenApi,
-    otp_app: :my_app,
-    path: "priv/openapi.json"
+defmodule MyApp.Endpoint do
+  use CainOpenApi
 end
 ```
 
@@ -33,7 +31,7 @@ After compilation the REST-Endpoints are accessible like `Endpoint.Deployment` a
 
 ```elixir
 Endpoint.Deployment.get_deployments()
-# {:get, "/deployment", %{}, []}
+#  {:get, "/deployment", %{}, []}
 ```
 
 An Endpoint.Module is equiped with all possible functions and parameters.
